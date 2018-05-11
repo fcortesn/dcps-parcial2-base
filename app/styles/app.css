@@ -16,3 +16,23 @@
 .author-detail {
   width: 80%;
 }
+.btn-primary{
+  background-color: #09826d;
+}
+
+th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #09826d;
+    color: white;
+}
+
+tr:hover {background-color: #ddd;}
+
+tr:nth-child(even){background-color: #f2f2f2;}
+
+td, th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}

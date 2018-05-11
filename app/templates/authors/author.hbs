@@ -1,1 +1,27 @@
+<ul>
+  <li>{{model.username}}</li>
+  <li><img alt="Brand" src={{model.profilePicture}}></li>
+  <li><strong>Firts name: </strong>{{model.firstName}}</li>
+  <li><strong>Last name: </strong>{{model.lastName}}</li>
+  <li><strong>Email: </strong>{{model.email}}</li>
+  <li><strong>Posts: </strong></li>
+  <table>
+    <tr>
+        <th>ID Curso</th>
+        <th>Nombre</th>
+        <th>Descripcición</th>
+        <th>Profesor</th>
+      </tr>
+      {{#each model.blogPosts as |post|}}
+        <tr>
+          <td><button type="button" class="btn btn-primary" {{action "Delete" post.id}}>Delete Post</button></td>
+          <td>{{post.title}}</td>
+          <td>{{post.publishedAt}}</td>
+          <td>{{post.content}}</td>
+        </tr>
+      {{else}}
+        <tr><td>This author don't have posts</td></tr>
+      {{/each}}
+    </table>
+</ul>
 {{outlet}}
